@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+#imagen1{
+height: 100px;
+width: 30%;
+position: relative;
+top: -75px;
+filter: brightness(50%);
+z-index:22;
+}
