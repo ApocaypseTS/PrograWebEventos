@@ -1,0 +1,87 @@
+@charset "ISO-8859-1";
+#barra ul li{
+    list-style:none;
+    display:block;
+    float:left;
+    
+    position: relative;
+    position: relative;
+    left:50%;
+    top: 30px;
+    z-index: 200;
+  
+   text-decoration: none;
+
+}
+#barra a {
+    color: rgb(0, 0, 0);
+   text-decoration: none;
+   margin: 50px;
+}
+#barra{
+    background-color: rgba(247, 203, 146, 0.747);
+    position: relative;
+    top: -19px;
+    width: 1360px;
+    height: 60px;
+  
+}
+::-webkit-scrollbar {
+  display: none;}
+  
+  #nombre {
+    position: relative;
+    top: 60px;
+    right: 20%;
+    height: 50px;
+    width: 200px;
+  }
+  #correo{
+    position: relative;
+    top: 130px;
+    right: 35.5%;
+    height: 50px;
+    width: 200px;
+  }
+  #mensaje{
+    position: relative;
+    top: 300px;
+    right: 51%;
+    height: 250px;
+    width: 200px;
+  }
+  button{
+    position: relative;
+    top: 480px;
+    right: 66%;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(202, 140, 202);
+    color: white;
+  }
+  img{
+      position: relative;
+      height: 500px;
+      left: 62%;
+      top: -95px;
+  }
+ 
+#logo{
+    height: 70px;
+    position: relative;
+    left: -290px;
+    top: 150px;
+}
+#parrafo p{
+    position: relative;
+    left: 150px;
+    margin: 2px;
+    top: 170px;
+    font-size: 20px;
+}
+#parrafo img{
+    height: 300px;
+    position: relative;
+    left: 850px;
+    top: -200px;
+}
