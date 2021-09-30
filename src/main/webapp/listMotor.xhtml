@@ -27,6 +27,7 @@
 						<p:commandButton value="Nuevo"						
 							action="#{servicioController.nuevoServicio()}"
 							styleClass="btn btn-primary ajax=false" />
+							
 					</div>
 				</div>
 			</div>
@@ -55,6 +56,11 @@
 							
 							<p:column headerText="Area">
 								<h:outputText value="#{ser.area.nombreArea}" />
+							</p:column>
+							
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listMotor" value="Eliminar"
+									actionListener="#{servicioController.eliminar(ser)}" />
 							</p:column>
 							
 
