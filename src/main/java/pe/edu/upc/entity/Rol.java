@@ -1,6 +1,7 @@
 package pe.edu.upc.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,18 +28,18 @@ public class Rol implements Serializable {
 		super();
 	}
 
-	public Rol(int id, String nombreRol) {
+	public Rol(int idRol, String nombreRol) {
 		super();
-		this.idRol = id;
+		this.idRol = idRol;
 		this.nombreRol = nombreRol;
 	}
 
-	public int getId() {
+	public int getIdRol() {
 		return idRol;
 	}
 
-	public void setId(int id) {
-		this.idRol = id;
+	public void setIdRol(int idRol) {
+		this.idRol = idRol;
 	}
 
 	public String getNombreRol() {
@@ -48,5 +49,23 @@ public class Rol implements Serializable {
 	public void setNombreRol(String nombreRol) {
 		this.nombreRol = nombreRol;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(idRol, nombreRol);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Rol other = (Rol) obj;
+		return idRol == other.idRol && Objects.equals(nombreRol, other.nombreRol);
+	}
+
 
 }

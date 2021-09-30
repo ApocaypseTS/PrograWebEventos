@@ -1,6 +1,7 @@
 package pe.edu.upc.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,14 +38,16 @@ public class Servicio implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Servicio(int id, String nombreServicio, String descripcion, Area area) {
+	
+	public Servicio(int idServicio, String nombreServicio, String descripcion, Area area) {
 		super();
-		this.idServicio = id;
+		this.idServicio = idServicio;
 		this.nombreServicio = nombreServicio;
 		this.descripcion = descripcion;
 		this.area = area;
 	}
-	
+
+
 	public int getIdServicio() {
 		return idServicio;
 	}
@@ -75,6 +78,24 @@ public class Servicio implements Serializable {
 
 	public void setArea(Area area) {
 		this.area = area;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(area, descripcion, idServicio, nombreServicio);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Servicio other = (Servicio) obj;
+		return Objects.equals(area, other.area) && Objects.equals(descripcion, other.descripcion)
+				&& idServicio == other.idServicio && Objects.equals(nombreServicio, other.nombreServicio);
 	}
 
 	

@@ -35,7 +35,7 @@
 				<div class="col-sm-12">
 					<div class="form-group table-responsive box-table-class">
 						<p:dataTable id="lstServicio" var="ser"
-							value="#{servicioController.limpiarServicio()}" paginator="true"
+							value="#{servicioController.listaServicios}" paginator="true"
 							paginatorPosition="top" rowsPerPageTemplate="10,20,30,40,50"
 							rows="10" styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
@@ -55,6 +55,11 @@
 							
 							<p:column headerText="Area">
 								<h:outputText value="#{ser.area.nombreArea}" />
+							</p:column>
+							
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listMotor" value="Eliminar"
+									actionListener="#{servicioController.eliminar(ser)}" />
 							</p:column>
 							
 
