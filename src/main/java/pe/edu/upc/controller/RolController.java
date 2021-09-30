@@ -50,7 +50,7 @@ public class RolController implements Serializable {
 	}
 	
 	public void eliminar(Rol rol) {
-		mService.eliminar(rol.getId());
+		mService.eliminar(rol.getIdRol());
 		this.listar();
 	}
 	

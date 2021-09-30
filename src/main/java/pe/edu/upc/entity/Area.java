@@ -1,6 +1,7 @@
 package pe.edu.upc.entity;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,9 +28,9 @@ public class Area implements Serializable {
 		super();
 	}
 
-	public Area(int id, String nombreArea) {
+	public Area(int idArea, String nombreArea) {
 		super();
-		this.idArea = id;
+		this.idArea = idArea;
 		this.nombreArea = nombreArea;
 	}
 
@@ -47,6 +48,23 @@ public class Area implements Serializable {
 
 	public void setNombreArea(String nombreArea) {
 		this.nombreArea = nombreArea;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(idArea, nombreArea);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Area other = (Area) obj;
+		return idArea == other.idArea && Objects.equals(nombreArea, other.nombreArea);
 	}
 
 }
