@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html
+   PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:h="http://java.sun.com/jsf/html">
+  <head>
+    <title>
+      sign up 
+    </title><script type="text/javascript" xml:space="preserve">//<![CDATA[
+      addEventListener(
+        "load",
+        function () {
+          setTimeout(hideURLbar, 0);
+        },
+        false
+      );
+      function hideURLbar() {
+        window.scrollTo(0, 1);
+      }
+    //]]></script>
+        <link href="resources/css/styles_reg2" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="resources/css/styles_reg2.css" />
+    <link href="resources/css/styles_reg.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+  <body>
+    <div class="barra">
+      <ul>
+        <li>
+          <img id="imagen1" src="resources/img/logo.png" alt="" />
+        </li>
+        <li>
+          Inicio
+        </li>
+        <li>
+          <a href="#seccion2">Nosotros</a>
+        </li>
+        <li>
+          <a href="#seccion3"> Contactanos</a>
+        </li>
+      </ul>
+      <h1 class="header-ed">
+        Design It
+      </h1>
+      <div class="art-bothside">
+        <div class="mid-cls">
+          <div class="art-right-ed">
+            <h2>
+              Crear Cuenta
+            </h2>
+            <p>
+            Podras ofrecer tus servicios a los demas para que los ayudes a realizar sus eventos y sean inolvidables
+            </p>
+            <form action="#" method="post">
+              <div class="main">
+                <div class="form-left-to-em">
+                  <input type="text"  name="name" value="Nombre" /> 
+                  <input type="text"   name="lastname" value="Apellido"/>
+                                    <input type="text"   name="service" value="Servicio"/>
+                </div>
+                <div class="form-right-ed">
+                  <input type="text" name="email" value="Email"/>
+                </div>
+              </div>
+              <div class="main">
+                <div class="form-left-to-em">
+                  <input type="password" name="password" id="password" value="Contraseña"/>
+                  <div class="clear"></div>
+                </div>
+                <div class="form-right-ed">
+                  <input type="password" id="confirm_password" value="Confirmar contraseña"/>
+                </div>
+              </div>
+              <div class="btnn">
+                <button type="submit">Registrarse</button>
+              </div>
+            </form>
+            <div class="banner-agileits-btm">
+              <div class="emayouts_more-buttn">
+                <h3>
+                  ¿Ya tienes una cuenta? <a href="Login.html"
+                  class="play-icon popup-with-zoom-anim">Inicia Sesión</a>
+                </h3>
+              </div>
+              <div id="small-dialog1" class="mfp-hide ed_small_dialog wthree_pop">
+                <div class="agileits_modal_body">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="art-left-ed">
+            <img src="resources/img/reg.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+      </div><script type="text/javascript" xml:space="preserve">//<![CDATA[
+      var password = document.getElementById("password"),
+        confirm_password = document.getElementById("confirm_password");
+
+      function validatePassword() {
+        if (password.value != confirm_password.value) {
+          confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+          confirm_password.setCustomValidity("");
+        }
+      }
+
+      password.onchange = validatePassword;
+      confirm_password.onkeyup = validatePassword;
+    //]]></script> <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      type="text/javascript" xml:space="preserve"></script> <script
+      src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.js"
+      type="text/javascript" xml:space="preserve"></script> <script
+      type="text/javascript" xml:space="preserve">//<![CDATA[
+      $(document).ready(function () {
+        $(".popup-with-zoom-anim").magnificPopup({
+          type: "inline",
+          fixedContentPos: false,
+          fixedBgPos: true,
+          overflowY: "auto",
+          closeBtnInside: true,
+          preloader: false,
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in",
+        });
+      });
+    //]]></script>
+    </div>
+  </body>
+</html>
