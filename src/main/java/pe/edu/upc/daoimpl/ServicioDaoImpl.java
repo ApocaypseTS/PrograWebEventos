@@ -29,7 +29,7 @@ public class ServicioDaoImpl implements IServicioDao, Serializable {
 	@Override
 	public List<Servicio> listar() {
 		List<Servicio> lista = new ArrayList<Servicio>();
-		Query q = em.createQuery("select m from Motor m");
+		Query q = em.createQuery("select s from Servicio s");
 		lista = (List<Servicio>) q.getResultList();
 		return lista;
 	}
