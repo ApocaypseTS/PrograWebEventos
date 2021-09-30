@@ -58,7 +58,7 @@ public class ServicioController implements Serializable {
 	public void listarAreas() {
 		listaAreas = aService.listar();
 	}
-
+	
 	public void limpiarServicio() {
 		this.init();
 	}
@@ -67,6 +67,7 @@ public class ServicioController implements Serializable {
 		mService.eliminar(servicio.getIdServicio());
 		this.listar();
 	}
+	
 	
 	public Servicio getServicio() {
 		return servicio;

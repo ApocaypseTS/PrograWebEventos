@@ -1,4 +1,4 @@
-package pe.edu.upc.controller;
+	package pe.edu.upc.controller;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class PrestamistaxServicioController implements Serializable {
 	
 	public String nuevoPrestamistaxServicio() {
 		this.setPrestamistaxServicio(new PrestamistaxServicio());
-		return "prestamistaxServicio.xhtml";
+		return "parte.xhtml";
 	}
 	
 	public void insertar() {
